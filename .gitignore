@@ -1,0 +1,14 @@
+# .gitignore
+.vscode/
+
+# 忽略真实的密钥文件
+.env
+
+# 忽略 Python 缓存和虚拟环境
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# 忽略本地下载的开源模型权重文件（如果有的话）
+models/

@@ -60,5 +60,5 @@ EMBEDDING_REGISTRY = {
 }
 
 # 获取当前激活的配置
-ACTIVE_LLM = os.getenv("ACTIVE_LLM", "deepseek") # 默认 fallback 为 deepseek
-ACTIVE_EMBEDDING = os.getenv("ACTIVE_EMBEDDING", "qwen")
+ACTIVE_LLM = os.getenv("ACTIVE_LLM", "doubao") # 默认 fallback 为 deepseek
+ACTIVE_EMBEDDING = os.getenv("ACTIVE_EMBEDDING", "zhipu")

@@ -1,6 +1,6 @@
 # .gitignore
 .vscode/
-
+.DS_Store
 # 忽略真实的密钥文件
 .env
 

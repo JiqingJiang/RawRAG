@@ -52,3 +52,27 @@ class HybridRetriever:
         
         # 截取最终需要的最优解
         return fused_results[:top_k]
+    
+
+def dynamic_k_cutoff(results: list, max_k: int = 10, drop_ratio: float = 0.25) -> list:
+    """
+    动态断崖截断算法
+    :param drop_ratio: 分数下跌超过前一名的百分之多少时，触发截断
+    """
+    if not results: return []
+    
+    final_results = [results[0]] # 第一名永远保留
+    for i in range(1, min(len(results), max_k)):
+        prev_score = results[i-1]['score']
+        curr_score = results[i]['score']
+        
+        # 计算相对下跌幅度
+        decline = (prev_score - curr_score) / prev_score if prev_score > 0 else 0
+        
+        if decline >= drop_ratio:
+            print(f"  🔪 触发动态截断！第 {i+1} 名分数暴跌 {decline*100:.1f}%，视为噪音剔除。")
+            break
+            
+        final_results.append(results[i])
+        
+    return final_results

@@ -1,6 +1,10 @@
-# test_gateways.py
-from core.config import LLM_REGISTRY
-from core.generator import LLMGenerator
+# test_gateways.py 验证我们封装的LLM API调用是否正常
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from src.core.config import LLM_REGISTRY
+from src.core.generator import LLMGenerator
 import time
 
 def test_all_llms():

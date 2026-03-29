@@ -1,7 +1,7 @@
 # core/evaluator.py
 import json
 import re
-from core.generator import LLMGenerator
+from src.core.generator import LLMGenerator
 
 class LLMJudge:
     """

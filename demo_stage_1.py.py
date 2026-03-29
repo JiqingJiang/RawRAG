@@ -1,9 +1,9 @@
 # demo_stage_1.py
-from core.chunker import raw_semantic_chunker
-from core.embedder import LocalModelEmbedder
-from core.retriever import PureMathRetriever
-from core.generator import LLMGenerator
-from core.config import LLM_REGISTRY, EMBEDDING_REGISTRY, ACTIVE_LLM, ACTIVE_EMBEDDING
+from src.core.chunker import raw_semantic_chunker
+from src.core.embedder import LocalModelEmbedder
+from src.core.retriever import PureMathRetriever
+from src.core.generator import LLMGenerator
+from src.core.config import LLM_REGISTRY, EMBEDDING_REGISTRY, ACTIVE_LLM, ACTIVE_EMBEDDING
 
 def main():
     print(f"当前激活的 Embedding: [{ACTIVE_EMBEDDING}] | 大模型 LLM: [{ACTIVE_LLM}]")

@@ -1,14 +1,19 @@
-# .gitignore
-.vscode/
-.DS_Store
-# 忽略真实的密钥文件
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 环境变量机密
 .env
 
-# 忽略 Python 缓存和虚拟环境
+# Python 缓存
 __pycache__/
 *.pyc
-venv/
-.venv/
+.pytest_cache/
 
-# 忽略本地下载的开源模型权重文件（如果有的话）
-models/
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 模型下载与分词缓存
+jieba.cache
